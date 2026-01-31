@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobNexa | AI Career Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+      @media print {
+        @page { size: A4; margin: 0; }
+        body { background: white !important; -webkit-print-color-adjust: exact; }
+        .no-print, header, aside { display: none !important; }
+        #root > div { display: none !important; }
+        
+        /* Specific Print Container */
+        .print-resume-container {
+            display: block !important;
+            position: absolute !important;
+            top: 0; left: 0;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 10mm !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
